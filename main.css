@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+#bg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    z-index: -9999;
+}
+
+#container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.pad {
+    padding: 32px;
+}
+
+a {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 1.5em;
+    transition: all 400ms;
+}
+
+a:hover {
+    color: rgb(24, 24, 24);
+}
+
+#title {
+    font-size: 3em;
+    cursor: default;
+}
+
+#subtitle {
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    cursor: default;
+}
+
+#links {
+    display: flex;
+    min-width: 400px;
+    min-height: 64px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+    #links {
+        flex-direction: column;
+    }
+}
