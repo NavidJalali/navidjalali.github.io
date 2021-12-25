@@ -9,7 +9,7 @@
 #bg {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     object-fit: cover;
@@ -28,7 +28,7 @@
 }
 
 .pad {
-    padding: 32px;
+    padding: 32px 0;
 }
 
 a {
@@ -54,8 +54,8 @@ a:hover {
 
 #links {
     display: flex;
-    min-width: 400px;
     min-height: 64px;
+    min-width: 300px;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -63,5 +63,6 @@ a:hover {
 @media only screen and (max-width: 600px) {
     #links {
         flex-direction: column;
+        min-width: none;
     }
 }
