@@ -1,68 +1,90 @@
+@font-face {
+    font-family: 'Commit';
+    src: url('./public/commit.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #1c1c1c;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: white;
-    font-family: 'Ubuntu Condensed', sans-serif;
+    font-family: 'Commit', sans-serif;
 }
 
-#bg {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    left: 0;
+#navbar {
     top: 0;
-    object-fit: cover;
-    z-index: -9999;
-}
-
-#container {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
+    left: 0;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 1em 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column;
-}
-
-.pad {
-    padding: 32px 0;
-}
-
-a {
-    font-family: 'Ubuntu Mono', monospace;
-    font-size: 1.5em;
-    transition: all 400ms;
-}
-
-a:hover {
-    color: rgb(24, 24, 24);
-}
-
-#title {
-    font-size: 3em;
-    cursor: default;
-}
-
-#subtitle {
-    font-size: 1.5em;
-    letter-spacing: 3px;
-    cursor: default;
-}
-
-#links {
-    display: flex;
-    min-height: 64px;
-    min-width: 300px;
     flex-direction: row;
     justify-content: space-between;
 }
 
-@media only screen and (max-width: 600px) {
-    #links {
-        flex-direction: column;
-        min-width: none;
-    }
+#navbar h1 {
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#navbar ul li {
+    margin: 0 10px;
+}
+
+main {
+    width: 90vw;
+    /* Needs to fill the rest of the height of the screen */
+    bottom: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.post {
+}
+
+.post a {
+    background-size: auto 1px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    color: white;
+    padding: 1px 0;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+.post p {
+    margin: 1em 0;
+}
+
+hr {
+    border: none;
+    background-image: linear-gradient(
+        to right,
+        #ff0000,
+        #ff7f00,
+        #ffff00,
+        #00ff00,
+        #0000ff,
+        #9400d3,
+        #ff00ff
+    );
+    height: 1px;
+    margin: 1em 0;
 }
